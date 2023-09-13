@@ -29,12 +29,14 @@ docker-wheels:
 	docker run -v `pwd`:$(GITHUB_WORKSPACE) ${WHEEL_IMAGE} sh -c "cd $(GITHUB_WORKSPACE); MONETDB_BRANCH=$(STABLE_BRANCH) scripts/make_wheel.sh 3.8"
 	docker run -v `pwd`:$(GITHUB_WORKSPACE) ${WHEEL_IMAGE} sh -c "cd $(GITHUB_WORKSPACE); MONETDB_BRANCH=$(STABLE_BRANCH) scripts/make_wheel.sh 3.9"
 	docker run -v `pwd`:$(GITHUB_WORKSPACE) ${WHEEL_IMAGE} sh -c "cd $(GITHUB_WORKSPACE); MONETDB_BRANCH=$(STABLE_BRANCH) scripts/make_wheel.sh 3.10"
+	docker run -v `pwd`:$(GITHUB_WORKSPACE) ${WHEEL_IMAGE} sh -c "cd $(GITHUB_WORKSPACE); MONETDB_BRANCH=$(STABLE_BRANCH) scripts/make_wheel.sh 3.11"
 
 docker-wheels-aarch64:
 	docker run -v `pwd`:$(GITHUB_WORKSPACE) ${WHEEL_IMAGE}_aarch64 sh -c "cd $(GITHUB_WORKSPACE); MONETDB_BRANCH=$(STABLE_BRANCH) scripts/make_wheel.sh 3.7 manylinux2014_aarch64"
 	docker run -v `pwd`:$(GITHUB_WORKSPACE) ${WHEEL_IMAGE}_aarch64 sh -c "cd $(GITHUB_WORKSPACE); MONETDB_BRANCH=$(STABLE_BRANCH) scripts/make_wheel.sh 3.8 manylinux2014_aarch64"
 	docker run -v `pwd`:$(GITHUB_WORKSPACE) ${WHEEL_IMAGE}_aarch64 sh -c "cd $(GITHUB_WORKSPACE); MONETDB_BRANCH=$(STABLE_BRANCH) scripts/make_wheel.sh 3.9 manylinux2014_aarch64"
 	docker run -v `pwd`:$(GITHUB_WORKSPACE) ${WHEEL_IMAGE}_aarch64 sh -c "cd $(GITHUB_WORKSPACE); MONETDB_BRANCH=$(STABLE_BRANCH) scripts/make_wheel.sh 3.10 manylinux2014_aarch64"
+	docker run -v `pwd`:$(GITHUB_WORKSPACE) ${WHEEL_IMAGE}_aarch64 sh -c "cd $(GITHUB_WORKSPACE); MONETDB_BRANCH=$(STABLE_BRANCH) scripts/make_wheel.sh 3.11 manylinux2014_aarch64"
 
 
 docker-test:
